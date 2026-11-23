@@ -8,7 +8,7 @@ Since Python does not have a code editor like the VBA code editor in Microsoft E
 Preparing Your Workstation
 --------------------------
 
-* Install the latest Windows installer for Python from https://www.python.org/downloads/windows/. Because LARSA 4D's COM interface is 32-bit, there are some methods of the COM interface that cannot be used with a 64-bit version of Python. For that reason, the 32-bit installer is recommended.
+* Install the latest Windows installer for Python from https://www.python.org/downloads/windows/. Use 32-bit Python for Approach 1, which accesses the LarsaElements library directly. Approach 2 uses the running LARSA 4D Application object and can use 64-bit Python.
 
 In a Command Prompt (Windows start menu -> Command Prompt), run these commands:
 
@@ -55,4 +55,19 @@ It has the following limitations:
 * It is slower than the first approach when creating or accessing a very large amount of project or results information.
 * Only the project open in the running instance of LARSA 4D can be modified.
 
-Example: [LARSA4D_Macro_Approach2.py](LARSA4D_Macro_Approach2.py) 
+Example: [LARSA4D_Macro_Approach2.py](LARSA4D_Macro_Approach2.py)
+
+### Preliminary concrete anchor assessment
+
+`Concrete_Anchor_Capacity.ipynb` is an interactive screening calculator for
+anchor tension, shear, and combined utilisation. Open it in Jupyter or VS Code,
+edit the assessment-inputs cell, and run the notebook cells from top to bottom.
+
+The notebook exports a CSV report and includes an optional PDF export cell
+(requires the optional `reportlab` package). This is not a complete EN 1992-4
+design:
+pull-out and concrete edge-breakout require characteristic group resistances
+from the anchor's applicable ETA. The concrete-cone and pry-out checks use
+simplified assumptions; review the notebook report and verify all inputs,
+partial factors, geometry, and failure modes against the governing National
+Annex and product ETA before relying on any result.

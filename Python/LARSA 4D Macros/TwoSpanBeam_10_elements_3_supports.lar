@@ -1,0 +1,246 @@
+LAR6A
+LARSA 4D Data File in ASCII Format
+Created in LARSA 4D version 8.9r1 on 23/11/2026 16:39:46
+
+BEGIN INTRO
+Project Information:
+4 Records
+LARSAVersion=8.9.1
+title=
+author=
+comments=
+END INTRO
+
+BEGIN ANALYSIS
+Analysis Parameters
+65 Records
+analysis=15
+solver=AUTOMATIC
+instability=False
+keepPrevious=False
+showDetails=False
+allowCaching=True
+resultsForConstructedOnly=True
+stageStart=1
+stageEnd=1
+convergenceMaxIter=10
+convergenceDispTol=0.01
+convergenceForceTol=1
+modalNumShapes=1
+dampingAlpha=0
+dampingBeta=0
+genAlphaRhoInf=-1
+newmarkAlpha=0.5
+newmarkDelta=0.25
+loadCaseSolve=True
+combCaseSolve=True
+eigenvalueCase=1
+eigenvalueComb=0
+loadingIncrement=10
+csCreep=False
+csShrinkage=False
+csModulusTime=False
+csModulusTimeCode=AUTOMATIC
+csCode=CEBFIP90
+csHumidity=80
+creepBeamTensileAxialForce=False
+steelRelaxation=True
+lossesCreepShrinkage=True
+analysisRelaxationLaw=
+incremental=False
+combinationCaseStart=0
+combinationCaseEnd=0
+universalRestraints=000000
+pushoverMinimumIncrement=0.0001
+pushoverMaximumIncrement=1
+pushoverInitialIncrement=1
+pushoverStoppingJoint=0
+pushoverStoppingDOF=0
+pushoverStoppingDisplacement=1
+pushoverArcLength=True
+pushoverAutoIncrement=True
+timeHistoryExcitationOption=0
+timeHistoryUniformBaseCurveX=0
+timeHistoryUniformBaseCurveY=0
+timeHistoryUniformBaseCurveZ=0
+timeHistoryNewtonRaphson=0
+timeHistoryIntegrationMethod=0
+timeHistoryInitialSize=1
+timeHistoryMinSize=0.0001
+timeHistoryMaxSize=1
+timeHistoryEndingTime=1
+analysisGeometricNonlinearity=False
+timestepResolution=1
+includeTorsionalMass=False
+outputLocation=1
+activeUCS=0
+applySectionOffsetsInGlobal=-1
+analysisLoadClassBased=False
+analysisStageApplyAllCasesAtOnce=True
+analysisCableCompressiveStrength=0
+analysisPostTensionLoadTolerance=0.05
+END ANALYSIS
+
+BEGIN UNITS
+The following are the units used for this project:
+18 Records
+material:length=in
+material:force=kip
+material:temperature=F
+load:length=in
+load:force=kip
+load:temperature=F
+spring:length=in
+spring:force=kip
+mass elements:length=in
+mass elements:force=kip
+section:length=in
+coordinate:length=in
+displacement:length=in
+displacement:angle=rad
+force:length=in
+force:force=kip
+stress:length=in
+stress:force=kip
+END UNITS
+
+BEGIN MATERIALS
+FORMAT: NUMBER, NAME, MODULUS OF ELASTICITY, SHEAR MODULUS, UNIT WEIGHT, COEFFICIENT OF THERMAL EXPANSION, YIELD STRESS
+1 Records
+	1,"Steel",29000,11153.8461538462,.000284,0,0,0,0,0,0,.02,0,-1,-1,-1,-1,0,0
+END MATERIALS
+
+BEGIN SECTIONS
+FORMAT: NUMBER, NAME, EXTRA WEIGHT, AREA X, AREA Y, AREA Z, INERTIA X, INERTIA Y, INERTIA Z, STRESS POINT 1(X, Y, Z), STRESS POINT 2( X, Y, Z), STRESS POINT 3( X, Y, Z), STRESS POINT 4( X, Y, Z), PLASTIC MODULUS( X, Y, Z), PERIMETER, SHAPE, SHAPE PARAMETERS (if applicable)
+1 Records
+	1,"Illustrative beam section",10,10,0,0,50,100,100,0,0,0,0,0,0,0,0,0,0,0,50,0,-1
+	0,0,0,0,0,0,0,-1
+END SECTIONS
+
+BEGIN JOINTS
+FORMAT: NUMBER, X, Y, Z, CONSTRAINT (TRANS:XYZ,ROT:XYZ 0/1), DISPLACEMENT COORD SYSTEM
+21 Records
+	1,0,0,0,"111100",0,0,0
+	2,12,0,0,"000000",0,0,0
+	3,24,0,0,"000000",0,0,0
+	4,36,0,0,"000000",0,0,0
+	5,48,0,0,"000000",0,0,0
+	6,60,0,0,"000000",0,0,0
+	7,72,0,0,"000000",0,0,0
+	8,84,0,0,"000000",0,0,0
+	9,96,0,0,"000000",0,0,0
+	10,108,0,0,"000000",0,0,0
+	11,120,0,0,"011000",0,0,0
+	12,132,0,0,"000000",0,0,0
+	13,144,0,0,"000000",0,0,0
+	14,156,0,0,"000000",0,0,0
+	15,168,0,0,"000000",0,0,0
+	16,180,0,0,"000000",0,0,0
+	17,192,0,0,"000000",0,0,0
+	18,204,0,0,"000000",0,0,0
+	19,216,0,0,"000000",0,0,0
+	20,228,0,0,"000000",0,0,0
+	21,240,0,0,"011000",0,0,0
+END JOINTS
+
+BEGIN MEMBERS
+FORMAT: NUMBER, TYPE, SECTION, MATERIAL, I JOINT, J JOINT, INITIAL PRESTRESS, CASTING DAY, RIGID ZONE I, RIGID ZONE J, ORIENTATION METHOD, ANGLE, POINT(X,Y,Z)
+20 Records
+	1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0
+	2,1,1,1,1,2,3,0,0,0,0,0,0,0,0,0
+	3,1,1,1,1,3,4,0,0,0,0,0,0,0,0,0
+	4,1,1,1,1,4,5,0,0,0,0,0,0,0,0,0
+	5,1,1,1,1,5,6,0,0,0,0,0,0,0,0,0
+	6,1,1,1,1,6,7,0,0,0,0,0,0,0,0,0
+	7,1,1,1,1,7,8,0,0,0,0,0,0,0,0,0
+	8,1,1,1,1,8,9,0,0,0,0,0,0,0,0,0
+	9,1,1,1,1,9,10,0,0,0,0,0,0,0,0,0
+	10,1,1,1,1,10,11,0,0,0,0,0,0,0,0,0
+	11,1,1,1,1,11,12,0,0,0,0,0,0,0,0,0
+	12,1,1,1,1,12,13,0,0,0,0,0,0,0,0,0
+	13,1,1,1,1,13,14,0,0,0,0,0,0,0,0,0
+	14,1,1,1,1,14,15,0,0,0,0,0,0,0,0,0
+	15,1,1,1,1,15,16,0,0,0,0,0,0,0,0,0
+	16,1,1,1,1,16,17,0,0,0,0,0,0,0,0,0
+	17,1,1,1,1,17,18,0,0,0,0,0,0,0,0,0
+	18,1,1,1,1,18,19,0,0,0,0,0,0,0,0,0
+	19,1,1,1,1,19,20,0,0,0,0,0,0,0,0,0
+	20,1,1,1,1,20,21,0,0,0,0,0,0,0,0,0
+END MEMBERS
+
+BEGIN GEO-GROUPS
+FORMAT: NUMBER, NAME / OBJECT COUNT / OBJECT LIST
+1 Records
+	1,"Illustrative two-span beam",0,#FALSE#,-1
+		0
+		20
+			1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+		0
+		0
+		0
+		0
+END GEO-GROUPS
+
+BEGIN PRIMARY LOAD CASES
+FORMAT: CASEID, NAME, TYPE, STATUS, SCALE, WEIGHTFACTORX, WEIGHTFACTORY, WEIGHTFACTORZ 
+3 Records
+	1,"Illustrative self-weight",0,0,1,0,0,0,-1
+	BEGIN NEXT PRIMARY LOAD CASE
+
+	2,"Illustrative uniform load",0,0,1,0,0,0,0
+	BEGIN MEMBER LOADS
+	FORMAT: ??????????
+	20 Records
+		1,5,1,0,-100,0,-100
+		2,5,1,0,-100,0,-100
+		3,5,1,0,-100,0,-100
+		4,5,1,0,-100,0,-100
+		5,5,1,0,-100,0,-100
+		6,5,1,0,-100,0,-100
+		7,5,1,0,-100,0,-100
+		8,5,1,0,-100,0,-100
+		9,5,1,0,-100,0,-100
+		10,5,1,0,-100,0,-100
+		11,5,1,0,-100,0,-100
+		12,5,1,0,-100,0,-100
+		13,5,1,0,-100,0,-100
+		14,5,1,0,-100,0,-100
+		15,5,1,0,-100,0,-100
+		16,5,1,0,-100,0,-100
+		17,5,1,0,-100,0,-100
+		18,5,1,0,-100,0,-100
+		19,5,1,0,-100,0,-100
+		20,5,1,0,-100,0,-100
+	END MEMBER LOADS
+
+	BEGIN NEXT PRIMARY LOAD CASE
+
+	3,"Load Case 3",0,0,1,0,0,0,-1
+	BEGIN JOINT LOADS
+	FORMAT: JOINTID, FX, FY, FZ, MX, MY, MZ
+	1 Records
+		5,0,0,-100,0,0,0
+	END JOINT LOADS
+
+	BEGIN NEXT PRIMARY LOAD CASE
+
+END PRIMARY LOAD CASES
+
+BEGIN STAGES
+Below is the information for stage data.  Consult reference for data format.
+1 Records
+	1,"Illustrative staged analysis",1,72,80,2
+		1,"Construction and self-weight",0,1,1,0,0,0,0,0,0,0,16,1,0
+			1,0
+			1,1
+		2,"Uniform loading",0,0,1,0,0,0,0,0,0,0,16,1,0
+			2,1
+END STAGES
+
+BEGIN RESULT CASES
+RESULT CASES: Linear Result Combinations, Influence-Based Cases, and Extreme Effect Groups
+2 Records
+	"DYNAMIC:",1,"Linear Combinations","group"
+	"DYNAMIC:1",1,"Illustrative self-weight + Illustrative uniform load + Load Case 3","combination",3,#FALSE#,"ANALYSIS:1:1",1,#FALSE#,0,#FALSE#,"ANALYSIS:1:2",1,#FALSE#,0,#FALSE#,"ANALYSIS:1:3",1,#FALSE#,0,#FALSE#
+END RESULT CASES
+

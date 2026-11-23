@@ -1,6 +1,10 @@
 import win32com.client
+from win32com.client import gencache
 
 application = win32com.client.Dispatch("Larsa2000.Application")
+# Generate LARSA constants through the running app and keep element objects late-bound.
+gencache.EnsureDispatch(application.CreateObject("LarsaElements", "clsMemberLoad")[0])
+gencache.GetClassForCLSID = lambda clsid: None
 
 def CreateObject(class_name):
     library_name, class_name = class_name.split(".")

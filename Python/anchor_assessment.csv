@@ -1,0 +1,33 @@
+Section,Item,Value,Units
+Input,Concrete strength,30.0,MPa
+Input,Concrete density,,kg/m^3
+Input,Concrete condition,Cracked,
+Input,Anchor type,Mechanical anchor,
+Input,Anchor count,1,
+Input,Anchor diameter,12.0,mm
+Input,Effective embedment,100.0,mm
+Input,Tensile stress area,84.3,mm^2
+Input,Anchor ultimate strength,800.0,MPa
+Input,Anchor yield strength,640.0,MPa
+Input,Edge distance,150.0,mm
+Input,Anchor spacing,100.0,mm
+Input,Design tension,5.0,kN
+Input,Design shear,3.0,kN
+Input,Steel partial factor,1.5,
+Input,Concrete partial factor,1.5,
+Input,Tension interaction exponent,1.0,
+Input,Shear interaction exponent,1.0,
+Input,ETA group pull-out characteristic resistance,,kN
+Input,ETA group edge-breakout characteristic resistance,,kN
+Tension capacity,Steel tension,44.96,kN
+Tension capacity,Concrete cone,26.290682760247975,kN
+Tension capacity,Pull-out (ETA),,kN
+Shear capacity,Steel shear,25.957668102765574,kN
+Shear capacity,Concrete edge breakout (ETA),,kN
+Shear capacity,Pry-out,26.290682760247975,kN
+Result,Governing tension mode,Concrete cone,
+Result,Governing shear mode,Steel shear,
+Result,Tension utilisation,0.19018144357818267,
+Result,Shear utilisation,0.11557278520254964,
+Result,Interaction value,0.30575422878073233,
+Result,Status,INCOMPLETE - required ETA resistance missing,
