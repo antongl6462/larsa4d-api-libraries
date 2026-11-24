@@ -1,0 +1,157 @@
+
+<LARSA_SECTION_COMPOSER version="LAR6.0" MaterialDB="%APPDATA%\material.lma" RebarDB="%APPDATA%\rebars_us.drb">
+	
+<RECORD ID="1" Name="Single-Cell Box Girder Type 5" LengthUnit="mm" ForceUnit="MN" ShearAreaFactorY=" 1" ShearAreaFactorZ=" 1" VariationByLinearLength="false">
+		
+<Shape Name="U Girder" Standard="False" Cutout="False" Y=" 35.9442476182929" Z="-3.33385781376052E-15" Rotation=" 0">
+<Parameter Name="Depth" Variable="d" Default="84"/>
+<Parameter Name="Top Width" Variable="tb" Default="150"/>
+<Parameter Name="Top flange Thickness (ft)" Variable="ft" Default="6"/>
+<Parameter Name="Bottom Thickness (bt)" Variable="bt" Default="6"/>
+<Parameter Name="Ear Width (iw)" Variable="iw" Default="32"/>
+<Parameter Name="Side Thickness (st)" Variable="st" Default="4"/>
+<Parameter Name="Depth from top" Variable="d2" Default="18"/>
+<Parameter Name="Loss" Variable="w" Default="3"/>
+<Parameter Name="Angle between the Y-axis (vertical) and the webs" Variable="angle" UnitType="Angle" Default="15"/>
+<Parameter Name="Theta" Variable="theta" Default="angle*3.14159265/180" Hidden="True"/>
+<Parameter Name="L1" Variable="l1" Default="tan(theta)*bt" Hidden="True"/>
+<Parameter Name="L2" Variable="l2" Default="(d-(bt+d2))*tan(theta)" Hidden="True"/>
+<Parameter Name="L3" Variable="l3" Default="(d-bt)*tan(theta)" Hidden="True"/>
+<Parameter Name="L4" Variable="l4" Default="(d-d2)*tan(theta)" Hidden="True"/>
+<Parameter Name="hyp" Variable="hyp" Default="st/cos(theta)" Hidden="True"/>
+<Parameter Name="Top Web Thickness (twt)" Variable="twt" Default="(d2-ft)*tan(theta)+hyp" Hidden="True"/>
+<Parameter Name="Width at Bottom" Variable="bb" Default="tb-2*(iw+twt)-2*l4+2*hyp" Hidden="True"/>
+<Parameter Name="Xx" Variable="xx" Default="bb/2-hyp+l1" Hidden="True"/>
+<Point Y="-d" Z="-bb/2" StressPoint="3"/>
+<Point Y="-ft" Z="-bb/2-((d-ft)*tan(theta))"/>
+<Point Y="-ft" Z="-tb/2+w"/>
+<Point Y="0" Z="-tb/2" StressPoint="2"/>
+<Point Y="0" Z="-tb/2+(iw+twt)"/>
+<Point Y="-d2" Z="-tb/2+(iw+twt)"/>
+<Point Y="-d+bt" Z="-xx"/>
+<Point Y="-d+bt" Z="xx"/>
+<Point Y="-d2" Z="tb/2-(iw+twt)"/>
+<Point Y="0" Z="tb/2-(iw+twt)"/>
+<Point Y="0" Z="tb/2" StressPoint="1"/>
+<Point Y="-ft" Z="tb/2-w"/>
+<Point Y="-ft" Z="bb/2+((d-ft)*tan(theta))"/>
+<Point Y="-d" Z="bb/2" StressPoint="4"/>
+<Dimension Parameter="d" Orientation="Right" Point1="0" Point2="-d" Point3="bb/2+(iw+twt)+l3" Visible="True"/>
+<Dimension Parameter="bb" Orientation="Bottom" Point1="bb/2" Point2="-bb/2" Point3="-d" Visible="True"/>
+<Dimension Parameter="d2" Orientation="Right" Point1="0" Point2="-d2" Point3="-bb/2-l2+hyp" Visible="True"/>
+<Dimension Parameter="iw" Orientation="Top" Point1="-tb/2" Point2="-bb/2-((d-ft)*tan(theta))" Point3="0" Visible="True"/>
+<Dimension Parameter="w" Orientation="Bottom" Point1="-tb/2" Point2="-tb/2+w" Point3="-ft" Visible="True"/>
+<Dimension Parameter="ft" Orientation="Left" Point1="0" Point2="-ft" Point3="-tb/2" Visible="True"/>
+<Dimension Parameter="bt" Orientation="Left" Point1="-d+bt" Point2="-d" Point3="1" Visible="True"/>
+<Dimension Parameter="st" Orientation="Top" Point1="bb/2+l1" Point2="bb/2-hyp+l1" Point3="-d+bt" Visible="True"/>
+<Dimension Parameter="tb" Orientation="Top" Point1="tb/2" Point2="-tb/2" Point3="(bt+ft)/6" Visible="True"/>
+<Dimension Parameter="twt" Orientation="Top" Point1="-bb/2-((d-ft)*tan(theta))" Point2="-tb/2+(iw+twt)" Point3="0" Visible="True"/>
+<Rebars/>
+</Shape>
+<ConstructionSequence/>
+<CalculatedProperties>
+<Properties HasExpensive="yes" x=" 0" state="">
+<Property Name="Area" Value=" 1364.02743095249">
+</Property>
+<Property Name="zc" Value="-2.00031468825631E-15">
+</Property>
+<Property Name="yc" Value=" 3.53388928258616E-14">
+</Property>
+<Property Name="Izz" Value=" 1359243.50316629">
+</Property>
+<Property Name="Iyy" Value=" 2110873.92534566">
+</Property>
+<Property Name="Izy" Value=" 8.73114913702011E-11">
+</Property>
+<Property Name="Ipzz" Value=" 1359243.50316629">
+</Property>
+<Property Name="Ipyy" Value=" 2110873.92534566">
+</Property>
+<Property Name="Ipa" Value=" 0">
+</Property>
+<Property Name="J" Value=" 12831.2031277636">
+</Property>
+<Property Name="Cw" Value=" 0">
+</Property>
+<Property Name="PerimeterExt" Value=" 555.198656612781">
+</Property>
+<Property Name="Sz" Value=" 28284.72005536">
+</Property>
+<Property Name="Sy" Value=" 28144.9856712755">
+</Property>
+<Property Name="Zz" Value=" 38977.8871964412">
+</Property>
+<Property Name="Zy" Value=" 48015.5059951051">
+</Property>
+<Property Name="Rz" Value=" 31.5672740681971">
+</Property>
+<Property Name="Ry" Value=" 39.3386630044037">
+</Property>
+<Property Name="Qz" Value=" 19698.0500746903">
+</Property>
+<Property Name="Qy" Value=" 24007.7529965703">
+</Property>
+<Property Name="WeightArea" Value=" 1364.02743095249">
+</Property>
+<Property Name="Clz" Value=" 75">
+</Property>
+<Property Name="Cty" Value=" 35.9442476182929">
+</Property>
+<Property Name="PerimeterInt" Value=" 0">
+</Property>
+</Properties>
+<Properties HasExpensive="no" x=" 0" state="">
+<Property Name="Area" Value=" 1364.02743095249">
+</Property>
+<Property Name="zc" Value="-2.00031468825631E-15">
+</Property>
+<Property Name="yc" Value=" 3.53388928258616E-14">
+</Property>
+<Property Name="Izz" Value=" 1359243.50316629">
+</Property>
+<Property Name="Iyy" Value=" 2110873.92534566">
+</Property>
+<Property Name="Izy" Value=" 8.73114913702011E-11">
+</Property>
+<Property Name="Ipzz" Value=" 1359243.50316629">
+</Property>
+<Property Name="Ipyy" Value=" 2110873.92534566">
+</Property>
+<Property Name="Ipa" Value=" 0">
+</Property>
+<Property Name="J" Value=" 0">
+</Property>
+<Property Name="Cw" Value=" 0">
+</Property>
+<Property Name="PerimeterExt" Value=" 555.198656612781">
+</Property>
+<Property Name="Sz" Value=" 28284.72005536">
+</Property>
+<Property Name="Sy" Value=" 28144.9856712755">
+</Property>
+<Property Name="Zz" Value=" 0">
+</Property>
+<Property Name="Zy" Value=" 0">
+</Property>
+<Property Name="Rz" Value=" 31.5672740681971">
+</Property>
+<Property Name="Ry" Value=" 39.3386630044037">
+</Property>
+<Property Name="Qz" Value=" 19698.0500746903">
+</Property>
+<Property Name="Qy" Value=" 24007.7529965703">
+</Property>
+<Property Name="WeightArea" Value=" 1364.02743095249">
+</Property>
+<Property Name="Clz" Value=" 75">
+</Property>
+<Property Name="Cty" Value=" 35.9442476182929">
+</Property>
+<Property Name="PerimeterInt" Value=" 0">
+</Property>
+</Properties>
+</CalculatedProperties>
+<PropertyModifiers Area=" 1" AreaY=" 1" AreaZ=" 1" Iyy=" 1" Izz=" 1" Izy=" 1" J=" 1" Perimeter=" 1" PerimeterInterior=" 1"/>
+</RECORD>
+
+</LARSA_SECTION_COMPOSER>
